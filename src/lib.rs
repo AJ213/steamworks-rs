@@ -574,7 +574,7 @@ impl Drop for Manager {
 }
 
 /// A user's steam id
-#[derive(Clone, Copy, Debug, Ord, PartialOrd, Eq, PartialEq, Hash)]
+#[derive(Clone, Copy, Debug, Ord, PartialOrd, Eq, PartialEq, Hash, bitcode::Encode, bitcode::Decode)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub struct SteamId(pub(crate) u64);
 
